@@ -31,6 +31,9 @@ img {
   max-width: 100%;
 }
 
+
+
+
 .visually-hidden {
   position: absolute;
   white-space: nowrap;
@@ -93,19 +96,19 @@ footer {
   color: #2196f3;
 }
 
-.button:hover,
-.button:focus {
+.portfolio-button:hover,
+.portfolio-button:focus {
   color: var(--white-color);
   background-color: var(--accent-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
-.button {
+.portfolio-button {
   cursor: pointer;
   padding: 6px 22px;
   border-radius: 4px;
 }
-.button:not(:last-child) {
+.portfolio-button:not(:last-child) {
   margin-right: 8px;
 }
 
@@ -202,11 +205,9 @@ a {
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.section-header {
-  padding-bottom: 32px;
-  padding-top: 32px;
-}
+
 .nav {
+  display: block
   text-decoration: none;
   font-family: Roboto;
   font-style: normal;
@@ -214,7 +215,14 @@ a {
   font-size: 14px;
   line-height: 1.1;
   letter-spacing: 0.02em;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  
 }
+
+
+
+
 
 .h1 {
   font-family: Roboto;
@@ -227,18 +235,19 @@ a {
   max-width: 650px;
 }
 
-.hero button {
+.hero-button {
   background-color: var(--accent-color);
   color: var(--white-color);
   font-family: Roboto;
   font-style: normal;
   font-weight: bold;
   font-size: 16px;
-  line-height: 1.9;
   letter-spacing: 0.06em;
   border-radius: 4px;
+  padding: 10px 32px;
+  
 }
-.hero button:hover {
+.hero-button:hover {
   background-color: #188ce8;
 }
 
@@ -301,7 +310,7 @@ a {
   letter-spacing: 0.03em;
   margin-bottom: 20px;
 }
-.button {
+.portfolio-button {
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -373,6 +382,10 @@ a {
 .nav-items:not(:last-child) {
   margin-right: 30px;
 }
+
+
+
+
 .conteiner {
   width: 1200px;
   padding-left: 15px;
@@ -619,7 +632,8 @@ a:hover{
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.soc-a-f:hover {
+.soc-a-f:hover, 
+.soc-a-f:focus {
   background-color: var(--accent-color);
 }
 
@@ -658,3 +672,164 @@ h3 {
   padding-top: 60px;
   padding-bottom: 60px;
 }
+
+
+.nav#studia{
+
+  position: relative;
+}
+
+.nav#studia::after{
+  display: block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  bottom: 0%;
+  left: 0%;
+
+}
+
+.nav#portfolio{
+
+  position: relative;
+}
+
+.nav#portfolio::after{
+  display: block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-color);
+  border-radius: 2px;
+  bottom: 0%;
+  left: 0%;
+
+}
+
+.backdrop.is-hidden{
+
+  opacity: 0;
+  pointer-events: none;
+   
+
+}
+
+.backdrop{
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1024px;
+  background-color: rgba(0, 0, 0, 0.2);
+   transition:  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+ 
+  
+}
+
+.modal{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  width: 528px;
+  height: 581px;
+  background-color: #fff;
+}
+
+.close{
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  background: #FFFFFF;
+border: 1px solid rgba(0, 0, 0, 0.1);
+box-sizing: border-box;
+}
+
+
+
+
+.close:hover{
+  cursor: pointer;
+}
+
+
+  
+.work-items{
+  position: relative;
+}
+
+.work-items::after{
+  content: '';
+  position: absolute;
+  height: 70px;
+  width: 370px;
+  background-color: rgba(47, 48, 58, 0.8);
+  bottom: 0;
+  left: 0;
+}
+
+
+.items-title{
+  position: absolute;
+  bottom: 27px;
+  left: 91px;
+  font-family: Roboto;
+font-style: normal;
+font-weight: bold;
+font-size: 14px;
+line-height: 1.1;
+text-align: center;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: var(--white-color);
+
+;
+}
+
+.def-image{
+  position: relative;
+  overflow: hidden;
+ 
+}
+
+.blue-image{
+ 
+  transform: translateY(100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 370px;
+  height: 294px;
+  background-color: rgba(33, 150, 243, 0.9);
+  font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 18px;
+line-height: 1.6;
+letter-spacing: 0.03em;
+color: #FFFFFF;
+padding:  63px 24px;
+ transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+  
+}
+
+
+.card:hover .blue-image,
+.card:focus .blue-image
+
+{
+  
+  transform: translateY(0%);
+  transition: 250ms transform cubic-bezier(0.4, 0, 0.2, 1);
+  
+  
+}
+

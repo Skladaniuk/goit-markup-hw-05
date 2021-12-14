@@ -68,6 +68,7 @@ footer {
   width: calc(100% / 3 - 30px);
   margin-top: 30px;
   margin-left: 30px;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .conteiner-portfolio {
@@ -80,13 +81,7 @@ footer {
   color: #2196f3;
 }
 
-.info:hover .icon-mail {
-  fill: var(--accent-color);
-}
 
-.info:focus .icon-mail {
-  fill: var(--accent-color);
-}
 .info:hover,
 .info:focus {
   color: #2196f3;
@@ -141,6 +136,7 @@ a {
   letter-spacing: 0.02em;
   display: flex;
   align-items: center;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .portfolio p {
   color: var(--secondly-text-color);
@@ -207,8 +203,8 @@ a {
 }
 
 .nav {
-  display: block
-  text-decoration: none;
+  display: block;
+ text-decoration: none;
   font-family: Roboto;
   font-style: normal;
   font-weight: 500;
@@ -217,6 +213,7 @@ a {
   letter-spacing: 0.02em;
   padding-bottom: 32px;
   padding-top: 32px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   
 }
 
@@ -245,9 +242,11 @@ a {
   letter-spacing: 0.06em;
   border-radius: 4px;
   padding: 10px 32px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) ;
   
 }
-.hero-button:hover {
+.hero-button:hover,
+.hero-button:focus {
   background-color: #188ce8;
 }
 
@@ -318,6 +317,7 @@ a {
   line-height: 1.6;
   letter-spacing: 0.03em;
   border: none;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .conteiner-button {
   text-align: center;
@@ -359,7 +359,8 @@ a {
   box-sizing: border-box;
 }
 
-.card:hover{
+.card:hover,
+.card:focus{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 /* ------body-------- */
@@ -497,9 +498,11 @@ a {
   height: 12px;
   margin-right: 10px;
   fill: var(--secondly-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.info:hover .icon-mail {
+.info:hover .icon-mail,
+.info:focus .icon-mail {
   fill: var(--accent-color);
 }
 
@@ -508,11 +511,15 @@ a {
   height: 16px;
   margin-right: 10px;
   fill: var(--secondly-text-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.info:hover .icon-phone {
+.info:hover .icon-phone,
+.info:focus .icon-phone {
   fill: var(--accent-color);
 }
+
+
 
 .adv-bag {
   width: 270px;
@@ -530,6 +537,7 @@ a {
   height: 20px;
   width: 20px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-link:not(:last-child) {
   margin-right: 10px;
@@ -549,13 +557,16 @@ a {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.soc-a:hover {
+.soc-a:hover,
+.soc-a:focus {
   background-color: var(--accent-color);
 }
 
-.soc-a:hover .soc-icon {
+.soc-a:hover .soc-icon,
+.soc-a:focus .soc-icon {
   fill: #fff;
 }
 
@@ -583,11 +594,13 @@ a:hover{
   border: 1px solid #afb1b8;
   border-radius: 4px;
   padding: 16px 32px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon {
   width: 106px;
   height: 60px;
   fill: #afb1b8;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .li-client:not(:last-child) {
@@ -598,6 +611,7 @@ a:hover{
 .a-client:focus
 {
   border-color: var(--accent-color);
+  
 
 }
 
@@ -611,6 +625,7 @@ a:hover{
   height: 20px;
   width: 20px;
   fill: var(--white-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .soc-link-f:not(:last-child) {
   margin-right: 10px;
@@ -630,6 +645,7 @@ a:hover{
   align-items: center;
   justify-content: center;
   background-color: rgba(255, 255, 255, 0.1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .soc-a-f:hover, 
@@ -637,7 +653,8 @@ a:hover{
   background-color: var(--accent-color);
 }
 
-.soc-a-f:hover .soc-icon-f {
+.soc-a-f:hover .soc-icon-f,
+.soc-a-f:focus .soc-icon-f {
   fill: #fff;
 }
 .footer-info {
@@ -714,21 +731,22 @@ h3 {
 
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
    
 
 }
 
 .backdrop{
   opacity: 1;
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 1024px;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
    transition:  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
- 
-  
+   z-index: 2;
+   
 }
 
 .modal{
@@ -739,6 +757,7 @@ h3 {
   width: 528px;
   height: 581px;
   background-color: #fff;
+  z-index: 2;
 }
 
 .close{
@@ -790,8 +809,7 @@ text-align: center;
 letter-spacing: 0.03em;
 text-transform: uppercase;
 color: var(--white-color);
-
-;
+z-index: 1;
 }
 
 .def-image{
